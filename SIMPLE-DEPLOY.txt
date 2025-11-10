@@ -1,0 +1,53 @@
+=====================================================
+ПРОСТАЯ ИНСТРУКЦИЯ ПО РАЗВЕРТЫВАНИЮ MY HELPER
+=====================================================
+
+Откройте ДВА терминала:
+
+═══════════════════════════════════════════════════
+ТЕРМИНАЛ 1 (Сервер):
+═══════════════════════════════════════════════════
+
+ssh root@95.46.96.147
+
+# После подключения выполните:
+
+apt update && apt install nginx -y
+systemctl start nginx && systemctl enable nginx
+mkdir -p /var/www/myhelper.uz
+
+# НЕ ЗАКРЫВАЙТЕ этот терминал!
+
+═══════════════════════════════════════════════════
+ТЕРМИНАЛ 2 (Локальный):
+═══════════════════════════════════════════════════
+
+cd /Users/shaxzodisamahamadov/myhelper-site
+
+scp index.html styles.css script.js translations.js i18n.js root@95.46.96.147:/var/www/myhelper.uz/
+
+scp -r images/ root@95.46.96.147:/var/www/myhelper.uz/
+
+scp nginx-config.conf root@95.46.96.147:/etc/nginx/sites-available/myhelper.uz
+
+═══════════════════════════════════════════════════
+Вернитесь в ТЕРМИНАЛ 1:
+═══════════════════════════════════════════════════
+
+ln -s /etc/nginx/sites-available/myhelper.uz /etc/nginx/sites-enabled/
+rm -f /etc/nginx/sites-enabled/default
+nginx -t
+systemctl restart nginx
+chown -R www-data:www-data /var/www/myhelper.uz
+chmod -R 755 /var/www/myhelper.uz
+
+# Установка SSL:
+
+apt install certbot python3-certbot-nginx -y
+certbot --nginx -d myhelper.uz -d www.myhelper.uz
+
+# Введите ваш email и согласитесь с условиями
+
+═══════════════════════════════════════════════════
+✅ ГОТОВО! Сайт на https://myhelper.uz
+═══════════════════════════════════════════════════

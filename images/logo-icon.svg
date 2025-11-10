@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Helmet top -->
+  <rect x="203" y="11" width="103" height="162" fill="#F5A623"/>
+
+  <!-- Helmet main -->
+  <path d="M58 196C58 196 58 170 176 70C176 70 306 70 331 70C356 70 454 196 454 196H58Z" fill="#F5A623"/>
+
+  <!-- Helmet white stripe -->
+  <rect x="176" y="162" width="160" height="22" rx="4" fill="white"/>
+
+  <!-- Hand fingers -->
+  <rect x="98" y="251" width="30" height="95" fill="#F5A623"/>
+  <rect x="168" y="251" width="30" height="125" fill="#F5A623"/>
+  <rect x="238" y="251" width="30" height="125" fill="#F5A623"/>
+  <rect x="308" y="251" width="30" height="95" fill="#F5A623"/>
+  <rect x="378" y="251" width="30" height="95" fill="#F5A623"/>
+
+  <!-- Hand gaps (white) -->
+  <rect x="128" y="301" width="40" height="45" fill="white"/>
+  <rect x="198" y="376" width="40" height="45" fill="white"/>
+  <rect x="268" y="301" width="40" height="45" fill="white"/>
+  <rect x="338" y="301" width="40" height="45" fill="white"/>
+
+  <!-- Hand palm -->
+  <path d="M98 346C98 346 98 500 256 500C414 500 414 346 414 346L98 346Z" fill="#E89E1F"/>
+</svg>
