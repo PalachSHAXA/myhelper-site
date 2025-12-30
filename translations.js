@@ -6,7 +6,8 @@ const translations = {
             tariffs: "Тарифы",
             services: "Услуги",
             staff: "Персонал",
-            contacts: "Контакты"
+            contacts: "Контакты",
+            login: "Войти"
         },
         hero: {
             badge: "Управляющая компания нового поколения",
@@ -127,7 +128,8 @@ const translations = {
             tariffs: "Tariflar",
             services: "Xizmatlar",
             staff: "Xodimlar",
-            contacts: "Aloqa"
+            contacts: "Aloqa",
+            login: "Kirish"
         },
         hero: {
             badge: "Yangi avlod boshqaruv kompaniyasi",
